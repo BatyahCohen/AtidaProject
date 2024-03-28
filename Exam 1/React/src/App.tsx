@@ -29,7 +29,7 @@ function App()
     setClients(clients?.concat(client));
     axios
       .put("http://localhost:1234/clients/addClient", client)
-      .then((i) => alert("משתמש התווסף בהצלחה"));
+      .then((i) => alert("Client successfully added"));
       getAllClients()
   };
 
@@ -39,7 +39,7 @@ function App()
     setClients(temp?.concat(client));
     axios
       .post(`http://localhost:1234/clients/updateClient/${Id}`, client)
-      .then((i) => alert("משתמש עודכן בהצלחה"));
+      .then((i) => alert("Client successfully updated"));
 
   };
 
@@ -48,7 +48,7 @@ function App()
     setClients(clients?.filter((i:any) => i.Id != Id));
     axios
       .delete(`http://localhost:1234/clients/deleteClient/${Id}`)
-      .then((i) => alert("משתמש נמחק בהצלחה"));
+      .then((i) => alert("Client deleted successfully"));
   };
 
   const transfer = 

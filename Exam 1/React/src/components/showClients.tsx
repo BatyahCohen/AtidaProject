@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { Link} from "react-router-dom";
-//import { AddClient } from "./addClient";
 import MyContext from "../myContext";
 import { client } from "../classes/client";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,11 +20,9 @@ export const ShowClients = () =>
        {
            axios.get('http://localhost:1234/corona/getAllCoronaInfo').
            then((v)=>{dispatch({type: 'getAll', payload:v.data})})
-
        }
    },[])
   
-
   return(
   <center>
     <div>

@@ -26,7 +26,7 @@ public class TwitterTowers
 		switch(x)
 		{
 		case 1:
-			double perimeter=2*(Math.sqrt(Math.pow(width,2)+Math.pow(width/2.0, 2)))+width;
+			double perimeter=2*(Math.sqrt(Math.pow((double)width,2)+Math.pow(width/2.0,2)))+width;
 			System.out.println("Triangle perimeter: "+perimeter);
 			break;
 		case 2:

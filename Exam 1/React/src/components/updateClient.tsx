@@ -2,7 +2,6 @@ import React, { useContext, useRef, useState } from "react";
 import { client } from "../classes/client";
 import MyContext from "../myContext";
 import axios from "axios";
-import { AddCoronaInfo } from "./addCoronaInfo";
 import { corona } from "../classes/corona";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -37,7 +36,6 @@ export const UpdateClient=()=>
      if(!Checking(currentCoronaInfo,currentClient))
        return;
 
-
      //שליחת המשתמש המעודכן למסד הנתונים ועדכון רשימה מקומית
      updateClient(currentClient,currentClient?._id)
 
@@ -57,6 +55,7 @@ export const UpdateClient=()=>
    }));
 
    setBool(bool.map((value, index) => index == (i) ? true : value));
+
  }
 
  const addManufacturer=(m:string,i:number,j:number)=>

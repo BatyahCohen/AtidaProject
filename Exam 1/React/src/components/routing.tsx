@@ -5,7 +5,8 @@ import { ShowClients } from "./showClients";
 import { ClientDetails } from "./clientDetails";
 import { UpdateClient } from "./updateClient";
 import Nav from "./nav";
-import { AddClient2 } from "./addClient2";
+
+
 
 export const Routing=()=>
 {

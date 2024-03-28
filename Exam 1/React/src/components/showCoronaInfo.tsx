@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 export const ShowCoronaInfo = (props:any) => 
 {
+  debugger
  let id=props.Id
   
  //שימוש בסטור
@@ -12,7 +13,7 @@ export const ShowCoronaInfo = (props:any) =>
  
  //משתמש נוכחי
  let currentCoronaInfo:any=coronaInfo?.filter((i:any)=>i.Id==id)[0]
-
+ 
  return( 
     <center>
       {currentCoronaInfo?.vaccineDate[0] && (<div><b> First vaccine</b></div>)}

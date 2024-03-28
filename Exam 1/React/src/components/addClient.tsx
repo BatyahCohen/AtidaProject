@@ -2,7 +2,6 @@ import React, { useContext, useRef, useState } from "react";
 import { client } from "../classes/client";
 import MyContext from "../myContext";
 import axios from "axios";
-import { AddCoronaInfo } from "./addCoronaInfo";
 import { corona } from "../classes/corona";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -42,7 +41,7 @@ export const AddClient=()=>
      //שליחה למסד הנתונים ועדכון המידע המקומי בסטור
      axios.put('http://localhost:1234/corona/addCoronaInfo',currentCoronaInfo)
      .then((v)=>{dispatch({type: 'add', payload:currentCoronaInfo})});
-     
+
      // נצטרך לטעון מחדש את הנתונים_idעל מנת שלכל המשתנים יהיה 
      axios.get('http://localhost:1234/corona/getAllCoronaInfo').
      then((v)=>{dispatch({type: 'getAll', payload:v.data})})
